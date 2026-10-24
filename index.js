@@ -3,7 +3,7 @@
 
   // This client-side key is visible to anyone who can inspect the page.
   // Use only a key intended for public browser use, or proxy requests through a backend.
-  const OPENROUTER_API_KEY = 'PUT YOUR API KEY HERE';
+  const OPENROUTER_API_KEY = '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';
   const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
   const MODELS = [
     { id: 'nvidia/nemotron-3-ultra-550b-a55b:free', name: 'Nemotron 3 Ultra · NVIDIA' },
@@ -288,7 +288,7 @@
       if (controller) return;
       const text = input.value.trim();
       if (!text && !pendingImage) return;
-      if (!OPENROUTER_API_KEY || OPENROUTER_API_KEY === 'PUT YOUR API KEY HERE') {
+      if (!OPENROUTER_API_KEY || OPENROUTER_API_KEY === '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') {
         status.textContent = 'Add your OpenRouter API key in index.js before sending a message.';
         return;
       }
